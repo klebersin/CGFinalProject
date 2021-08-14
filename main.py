@@ -76,8 +76,12 @@ class Controller():
         predictions = self.myModel.predict(self.topredict)
         self.user = np.argmax(predictions[0])
         print(self.user)
-        if self.user == 2:
+        if self.user == 0:
+            self.label_result_aut_text.set("Bienvenida Eli")
+        if self.user == 1:
             self.label_result_aut_text.set("Bienvenido Kleber")
+        if self.user == 2:
+            self.label_result_aut_text.set("Bienvenido Franco")
         #t = threading.Thread(target=self.startRecognizer)
         #t.start()
 
